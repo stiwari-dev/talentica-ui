@@ -1,0 +1,790 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: Montserrat;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+.container {
+    width: 80%;
+    min-width: 375px;
+    max-width: 1920px;
+    margin: auto;
+    padding: 4rem 0;
+}
+
+header #top-navbar .container,
+header #top-navbar .container .nav-items,
+header #header-figures,
+header #auth-buttons,
+main #recommendation .container .image-gallery .box .box-details,
+main #recommendation .container .rules .figure,
+main #recommendation .container .rules .playlist .item,
+main #recommendation .container .image-gallery-two .box .box-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #header-figures .figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    max-height: 1080px;
+    min-height: 560px;
+    overflow-y: scroll;
+}
+
+header .header-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/images/zachary-nelson-192289-unsplash.png) #4621AD 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    header .header-bg {
+        background: url(/assets/images/zachary-nelson-192289-unsplash.png) #4621AD 50% 20% no-repeat padding-box;
+    }
+}
+
+header .header-bg:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #4621AD;
+    opacity: 0.83;
+}
+
+header .logo-container {
+    position: absolute;
+    top: -108px;
+    left: 43%;
+    width: 247px;
+    height: 208px;
+    min-height: 104px;
+    min-width: 124px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000042;
+    border-radius: 45px;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    header .logo-container {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        border-radius: 0;
+    }
+}
+
+header .logo-container .menu,
+header .logo-container .placeholder {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    header .logo-container .menu,
+    header .logo-container .placeholder {
+        color: #BCBCCB;
+        opacity: 1;
+        font-size: 32px;
+        display: inline-block;
+        margin: 0 2rem;
+    }
+}
+
+header .logo-container .wrapper {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    header .logo-container .wrapper {
+        margin: 0;
+    }
+}
+
+header .logo-container .wrapper .logo {
+    background: #5F41B6 0% 0% no-repeat padding-box;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 0.25px;
+    color: #FFEE00;
+    opacity: 1;
+    border-radius: 11px;
+}
+
+header .logo-container .wrapper .logo-title {
+    text-align: center;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    header .logo-container .wrapper .logo-title {
+        display: none;
+    }
+}
+
+header .logo-container .wrapper .logo-title-1 {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2.6px;
+    color: #5F41B6;
+}
+
+header .logo-container .wrapper .logo-title-2 {
+    font-size: 16px;
+    letter-spacing: 2.6px;
+    color: #5F41B6;
+}
+
+header #top-navbar {
+    position: relative;
+    margin: 5% auto 5% 0;
+}
+
+header #top-navbar .container .nav-items {
+    width: 20%;
+}
+
+header #top-navbar .container .nav-items .nav-item {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin: 0 0.25rem;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    color: #C6C6D4;
+    opacity: 1;
+}
+
+header #top-navbar .container .nav-items .nav-item:hover,
+header #top-navbar .container .nav-items .nav-item:active,
+header #top-navbar .container .nav-items .nav-item.active {
+    font-weight: bold;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+    header #top-navbar .container .nav-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+header #top-navbar .container .search-bar .fa {
+    position: relative;
+    left: 13%;
+    color: #BCBCCB;
+}
+
+header #top-navbar .container .search-bar input {
+    display: inline-block;
+    width: 208px;
+    height: 35px;
+    border-radius: 18px;
+    padding: 10px 30px;
+}
+
+@media screen and (max-width: 768px) {
+    header #top-navbar {
+        display: none;
+    }
+}
+
+header #mobile-navbar {
+    display: none;
+    transition: display 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+    header #mobile-navbar {
+        position: absolute;
+        top: 100px;
+        z-index: 2;
+        width: 100vw;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3rem;
+    }
+
+    header #mobile-navbar .nav-items {
+        width: 20%;
+    }
+
+    header #mobile-navbar .nav-items .nav-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        display: inline-block;
+        padding: 1.5rem 0.75rem;
+        margin: 0 0.25rem;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        color: #C6C6D4;
+        opacity: 1;
+    }
+
+    header #mobile-navbar .nav-items .nav-item:hover,
+    header #mobile-navbar .nav-items .nav-item:active,
+    header #mobile-navbar .nav-items .nav-item.active {
+        font-weight: bold;
+        color: #5F41B6;
+        border-bottom: 2px solid #FFFFFF;
+    }
+
+    header #mobile-navbar .search-bar .fa {
+        position: relative;
+        left: 13%;
+        color: #BCBCCB;
+    }
+
+    header #mobile-navbar .search-bar input {
+        display: inline-block;
+        width: 208px;
+        height: 35px;
+        border-radius: 18px;
+        padding: 10px 30px;
+        margin-bottom: 1rem;
+        border: 1px solid #C6C6D4;
+    }
+}
+
+header #header-details {
+    position: relative;
+    width: 50%;
+    max-width: 556px;
+    margin: 0 auto 5% auto;
+}
+
+@media screen and (max-width: 768px) {
+    header #header-details {
+        width: 70%;
+        top: 18%;
+    }
+}
+
+header #header-details .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    header #header-details .title {
+        font-size: 40px;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+}
+
+header #header-details .sub-title {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    header #header-details .sub-title {
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+}
+
+header #header-figures {
+    position: relative;
+    width: 80%;
+    max-width: 1120px;
+    margin: 0 auto 5% auto;
+}
+
+@media screen and (max-width: 768px) {
+    header #header-figures {
+        top: 20%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+header #header-figures .figure .fa {
+    font-size: 72px;
+    color: #FFEE00;
+    opacity: 1;
+    padding: 0.5rem;
+}
+
+header #header-figures .figure .title {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 0.5rem;
+}
+
+header #header-figures .figure .sub-title {
+    font: 18px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    header #header-figures .figure {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+}
+
+header #auth-buttons {
+    position: relative;
+    width: 50%;
+    max-width: 556px;
+    margin: 2rem auto;
+}
+
+@media screen and (max-width: 768px) {
+    header #auth-buttons {
+        top: 25%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+header #auth-buttons button {
+    width: 45%;
+    display: inline-block;
+    background: transparent;
+    padding: .75rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 22px;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 12px #0000000D;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    header #auth-buttons button {
+        margin-bottom: 2rem;
+    }
+}
+
+header #auth-buttons button:hover,
+header #auth-buttons button:active {
+    background: #FFFFFF;
+    color: #5F41B6;
+}
+
+main #recommendation .container .title,
+main #recommendation .container .title-mobile {
+    text-align: left;
+    font-weight: bold;
+    font-size: 51px;
+    letter-spacing: 0px;
+    color: #303336;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+    main #recommendation .container .title,
+    main #recommendation .container .title-mobile {
+        display: none;
+    }
+}
+
+main #recommendation .container .title-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .title-mobile {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: 0px;
+        color: #303336;
+        opacity: 1;
+    }
+}
+
+main #recommendation .container .sub-title {
+    width: 70%;
+    margin: 1rem 0 4rem 0;
+    text-align: left;
+    font-size: 22px;
+    letter-spacing: 0px;
+    color: #7B8591;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .sub-title {
+        font-size: 13px;
+        width: 90%;
+    }
+}
+
+main #recommendation .container .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'image-gallery image-gallery'
+        'rules about'
+        'rules about'
+        'rules image-gallery-two';
+    grid-gap: 2.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .main-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'image-gallery'
+            'rules'
+            'about'
+            'image-gallery-two';
+    }
+}
+
+main #recommendation .container .image-gallery {
+    grid-area: image-gallery;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    border: 1px solid #EFEFEF;
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .image-gallery {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+}
+
+main #recommendation .container .image-gallery .box {
+    width: 100%;
+    max-width: 231px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-right: 1rem;
+}
+
+main #recommendation .container .image-gallery .box img {
+    height: 150px;
+    background: transparent url("img/elijah-macleod-654389-unsplash.png") 0% 0% no-repeat padding-box;
+    border-radius: 10px 10px 0px 0px;
+    opacity: 1;
+}
+
+main #recommendation .container .image-gallery .box .box-details {
+    padding: 1rem;
+}
+
+main #recommendation .container .image-gallery .box .box-details .box-labels .box-title {
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: -0.09px;
+    color: #303336;
+    opacity: 1;
+}
+
+main #recommendation .container .image-gallery .box .box-details .box-labels .box-sub-title {
+    font-size: 8px;
+    letter-spacing: 0px;
+    color: #7B8591;
+    opacity: 1;
+}
+
+main #recommendation .container .image-gallery .box .box-details .add {
+    padding: 0.25rem 0.5rem;
+    border-radius: 50%;
+    background-color: #C6C6D4;
+    cursor: pointer;
+}
+
+main #recommendation .container .rules {
+    grid-area: rules;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+}
+
+main #recommendation .container .rules .figure {
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+main #recommendation .container .rules .figure img {
+    width: 30%;
+    height: 154px;
+    max-width: 189px;
+    max-height: 154px;
+    margin-right: 1rem;
+}
+
+main #recommendation .container .rules .figure .figure-details {
+    width: 70%;
+    text-align: left;
+}
+
+main #recommendation .container .rules .figure .figure-details .figure-title {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #3B3D40;
+    margin-bottom: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .rules .figure .figure-details .figure-title {
+        font-size: 16px;
+    }
+}
+
+main #recommendation .container .rules .figure .figure-details .figure-sub-title {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #3B3D40;
+    margin-bottom: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .rules .figure .figure-details .figure-sub-title {
+        font-size: 13px;
+    }
+}
+
+main #recommendation .container .rules .figure .figure-details .figure-text {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #3B3D40;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .rules .figure .figure-details .figure-text {
+        font-size: 11px;
+    }
+}
+
+main #recommendation .container .rules .figure .figure-details .add-playlist-btn {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0px;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    color: #4E4E4E;
+    opacity: 1;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+main #recommendation .container .rules .playlist {
+    padding: 0.5rem;
+}
+
+main #recommendation .container .rules .playlist .item {
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #3B3D40;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .rules .playlist .item {
+        font-size: 13px;
+    }
+}
+
+main #recommendation .container .rules .playlist .item .fa {
+    display: inline-block;
+    margin-right: 2rem;
+    padding: 0.75rem 0.75rem;
+    border-radius: 50%;
+}
+
+main #recommendation .container .rules .playlist .item .fa.playing {
+    background-color: #838D8F;
+    color: #FFFFFF;
+}
+
+main #recommendation .container .about {
+    grid-area: about;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+}
+
+main #recommendation .container .about img {
+    width: 100%;
+    height: 168px;
+}
+
+main #recommendation .container .about .about-details {
+    padding: 1rem 2rem;
+}
+
+main #recommendation .container .about .about-details .about-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.13px;
+    color: #303336;
+    opacity: 1;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .about .about-details .about-title {
+        font-size: 13px;
+    }
+}
+
+main #recommendation .container .about .about-details .about-sub-title {
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #7B8591;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .about .about-details .about-sub-title {
+        font-size: 12px;
+    }
+}
+
+main #recommendation .container .image-gallery-two {
+    grid-area: image-gallery-two;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .image-gallery-two {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+}
+
+main #recommendation .container .image-gallery-two .box {
+    width: 100%;
+    max-width: 231px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-right: 1rem;
+}
+
+main #recommendation .container .image-gallery-two .box img {
+    height: 150px;
+    background: transparent url("img/elijah-macleod-654389-unsplash.png") 0% 0% no-repeat padding-box;
+    border-radius: 10px 10px 0px 0px;
+    opacity: 1;
+}
+
+main #recommendation .container .image-gallery-two .box .box-details {
+    padding: 1rem;
+}
+
+main #recommendation .container .image-gallery-two .box .box-details .box-labels .box-title {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: -0.09px;
+    color: #303336;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .image-gallery-two .box .box-details .box-labels .box-title {
+        font-size: 9px;
+    }
+}
+
+main #recommendation .container .image-gallery-two .box .box-details .box-labels .box-sub-title {
+    font-size: 8px;
+    letter-spacing: 0px;
+    color: #7B8591;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    main #recommendation .container .image-gallery-two .box .box-details .box-labels .box-sub-title {
+        font-size: 7px;
+    }
+}
+
+main #recommendation .container .image-gallery-two .box .box-details .add {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    cursor: pointer;
+}
